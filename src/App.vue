@@ -1,8 +1,14 @@
 <script setup lang="ts">
-async function submit() {
-  await new Promise(r => setTimeout(r, 1000))
-  alert('Submitted! 🎉')
+import WebApp from '@twa-dev/sdk'
+
+WebApp.ready()
+
+async function submit(payload: Record<string, any>) {
+  WebApp.sendData(JSON.stringify(payload))
+  alert('Отправлено! 🎉\n\n' + JSON.stringify(payload))
 }
+
+
 </script>
 
 <template>
@@ -21,7 +27,7 @@ async function submit() {
       name="question_1"
       label="Новый подход к ИБ"
       placeholder="Ваш вопрос."
-      :help="`${value.question_1 ? value.question_1.length : 0} / 120`"
+      :help="`${value!.question_1 ? ((value!.question_1) as string).length : 0} / 120`"
       validation="length:0,120"
       validation-visibility="live"
       :validation-messages="{
@@ -34,7 +40,7 @@ async function submit() {
       name="question_2"
       label="Новые требования к технической безопасности"
       placeholder="Ваш вопрос."
-      :help="`${value.question_2 ? value.question_2.length : 0} / 120`"
+      :help="`${value!.question_2 ? ((value!.question_2) as string).length : 0} / 120`"
       validation="length:0,120"
       validation-visibility="live"
       :validation-messages="{
@@ -47,7 +53,7 @@ async function submit() {
       name="question_3"
       label="Импортовызов"
       placeholder="Ваш вопрос."
-      :help="`${value.question_3 ? value.question_3.length : 0} / 120`"
+      :help="`${value!.question_3 ? ((value!.question_3) as string).length : 0} / 120`"
       validation="length:0,120"
       validation-visibility="live"
       :validation-messages="{
@@ -60,7 +66,7 @@ async function submit() {
       name="question_4"
       label="Стресс-тест для ИБ"
       placeholder="Ваш вопрос."
-      :help="`${value.question_4 ? value.question_4.length : 0} / 120`"
+      :help="`${value!.question_4 ? ((value!.question_4) as string).length : 0} / 120`"
       validation="length:0,120"
       validation-visibility="live"
       :validation-messages="{
