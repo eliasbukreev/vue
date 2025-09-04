@@ -1,5 +1,16 @@
-# Vue 3 + TypeScript + Vite
+# Vue 3 + TypeScript + Vite + Telegram.WebApp + FormKit
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Простой опросник для работы с телеграм ботом в виде MiniApp.
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+## Главные команды
+
+```bash
+npm install -D package.json
+npm run dev
+```
+Для запуска сервера для разработки. Сайт находится на localhost:5137
+
+```bash
+npm run build
+```
+Для сборки фронта для отдачи через nginx/backend. Создает папку dist в которой находится опросник.
