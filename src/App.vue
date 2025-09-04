@@ -4,10 +4,23 @@ import WebApp from '@twa-dev/sdk'
 WebApp.ready()
 
 async function submit(payload: Record<string, any>) {
-  WebApp.sendData(JSON.stringify(payload))
-  alert('Отправлено! 🎉\n\n' + JSON.stringify(payload))
-}
+  try {
+    //Анимация + время для отправки
+    await new Promise(r => setTimeout(r, 1000))
 
+    // Отправляем данные в Telegram
+    WebApp.sendData(JSON.stringify(payload))
+
+    // Показываем подтверждение пользователю
+    alert('Спасибо! Ваши вопросы отправлены 🎉')
+
+    // Закрываем WebApp
+    WebApp.close()
+  } catch (error) {
+    console.error('Ошибка при отправке данных:', error)
+    alert('Ошибка при отправке данных. Попробуйте еще раз.')
+  }
+}
 
 </script>
 
