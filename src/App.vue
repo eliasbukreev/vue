@@ -32,14 +32,14 @@ async function submit(payload: Record<string, any>) {
       @submit="submit"
     >
     <div class="my-8">
-      <h1 class="text-xl font-bold mb-2">Ваш вопрос организаторам и экспертам конференции: </h1>
+      <h1 class="text-xl font-bold mb-2">Ваши вопросы организаторам и экспертам конференции: </h1>
       <span class="text-gray-500 text-sm">Cамые частые и важные будут включены в секции </span>
     </div>
     <FormKit
       type="textarea"
       name="question_1"
-      label="Новый подход к ИБ"
-      placeholder="Ваш вопрос."
+      label="Новый подход к ИБ."
+      placeholder="Ваш вопрос"
       :help="`${value!.question_1 ? ((value!.question_1) as string).length : 0} / 120`"
       validation="length:0,120"
       validation-visibility="live"
@@ -51,8 +51,8 @@ async function submit(payload: Record<string, any>) {
     <FormKit
       type="textarea"
       name="question_2"
-      label="Новые требования к технической безопасности"
-      placeholder="Ваш вопрос."
+      label="Новые требования к технической безопасности."
+      placeholder="Ваш вопрос"
       :help="`${value!.question_2 ? ((value!.question_2) as string).length : 0} / 120`"
       validation="length:0,120"
       validation-visibility="live"
@@ -64,22 +64,9 @@ async function submit(payload: Record<string, any>) {
     <FormKit
       type="textarea"
       name="question_3"
-      label="Импортовызов"
-      placeholder="Ваш вопрос."
+      label="Импортовызов. Cтресс-тест для ИБ."
+      placeholder="Ваш вопрос"
       :help="`${value!.question_3 ? ((value!.question_3) as string).length : 0} / 120`"
-      validation="length:0,120"
-      validation-visibility="live"
-      :validation-messages="{
-        length: 'Вопрос не может превышать 120 символов',
-      }"
-      help-class="text-right text-gray-500 text-sm"
-    />
-    <FormKit
-      type="textarea"
-      name="question_4"
-      label="Стресс-тест для ИБ"
-      placeholder="Ваш вопрос."
-      :help="`${value!.question_4 ? ((value!.question_4) as string).length : 0} / 120`"
       validation="length:0,120"
       validation-visibility="live"
       :validation-messages="{
