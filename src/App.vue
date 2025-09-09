@@ -5,11 +5,11 @@ WebApp.ready()
 
 async function submit(payload: Record<string, any>) {
   try {
-    //Анимация + время для отправки
-    await new Promise(r => setTimeout(r, 500))
-
     // Отправляем данные в Telegram
     WebApp.sendData(JSON.stringify(payload))
+
+    //Анимация + время для отправки
+    await new Promise(r => setTimeout(r, 500))
 
     // Показываем подтверждение пользователю
     alert('Спасибо! Ваши вопросы отправлены 🎉')
