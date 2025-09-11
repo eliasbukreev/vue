@@ -74,6 +74,16 @@ async function submit(payload: Record<string, any>) {
       }"
       help-class="text-right text-gray-500 text-sm"
     />
+    <div class="my-6">
+      <FormKit
+        type="checkbox"
+        name="question_4"
+        label="Выберите вендоров, которым вы даёте согласие на передачу вашего адреса электронной почты."
+        :options="['ИнфоТеКС', 'НПО Эшелон', 'Код безопасности', 'Актив-Софт', 'Индид', 'Новые облачные технологии']"
+        help="Отмеченные ниже вендоры смогут получить ваш адрес электронной почты для последующей коммуникации."
+      />
+    </div>
     </FormKit>
+
   </div>
 </template>
