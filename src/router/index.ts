@@ -1,11 +1,11 @@
 import {createRouter, createMemoryHistory} from 'vue-router'
 import Home from '../components/Home.vue'
-import FirstSurvey from '../components/FirstSurvey.vue'
+import PeriodicControl from '../components/Periodic control.vue'
 import SecondSurvey from '../components/SecondSurvey.vue'
 
 const routes = [
     {path: "/", component: Home},
-    {path: "/first", component: FirstSurvey},
+    {path: "/periodic-control", component: PeriodicControl},
     {path: "/second", component: SecondSurvey}
 ]
 

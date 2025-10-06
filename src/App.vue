@@ -1,6 +1,4 @@
 <script setup lang="ts">
-  import WebApp from '@twa-dev/sdk'
-  WebApp.ready()
 </script>
 
 <template>

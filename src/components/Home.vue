@@ -7,16 +7,10 @@
     </div>
 
     <button 
-    @click="$router.push('/first')" 
+    @click="$router.push('/periodic-control')" 
     class="w-full mb-4 bg-red-600 text-white py-2 rounded-lg hover:bg-red-700 transition font-bold">
-    Вопросы участникам конференции
+    Периодический контроль        
    </button>
-
-    <button 
-    @click="$router.push('/second')" 
-    class="w-full mb-4 bg-red-600 text-white py-2 rounded-lg hover:bg-red-700 transition font-bold">
-    Анкета участника
-    </button>
 
   </div>
 </div>
