@@ -2,7 +2,9 @@
 
 import { submit } from '../utils/submit';
 import BackButton from './BackButton.vue';
-import { schema } from '../data/Periodic control';
+import { organisation } from '../data/01-organisation';
+import { documentation } from '../data/02-documentation';
+import { committee }  from '../data/03-сommittee';
 
 function handleSubmit(value: Record<string, any>) {
   submit(value);
@@ -17,10 +19,18 @@ function handleSubmit(value: Record<string, any>) {
       type="form"
       @submit="handleSubmit"
     >
-    <FormKitSchema
-    :schema="schema"
-    />
+      <FormKitSchema
+      :schema="organisation"
+      />
+      <FormKitSchema
+      :schema="documentation"
+      />
+      <FormKitSchema
+      :schema="сommittee"
+      />
+
     </FormKit>
+    
 
     <BackButton />
 
