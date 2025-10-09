@@ -4,10 +4,9 @@ import { useRouter } from 'vue-router';
 import { submit } from '../utils/submit';
 import BackButton from './BackButton.vue';
 
-const surveyName = 'survey_1';
 const router = useRouter()
 function handleSubmit(value: Record<string, any>) {
-  submit(surveyName, value, router);
+  submit(value, router);
 }
 
 </script>

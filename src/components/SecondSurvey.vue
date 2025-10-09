@@ -5,10 +5,9 @@ import { submit } from '../utils/submit';
 import BackButton from './BackButton.vue';
 import { ref } from 'vue'
 
-const surveyName = 'survey_2';
 const router = useRouter()
 function handleSubmit(value: Record<string, any>) {
-  submit(surveyName, value, router);
+  submit(value, router);
 }
 
 const choice = ref<string | undefined>(undefined)
@@ -26,6 +25,22 @@ const choice_4 = ref<string | undefined>(undefined)
     <div class="my-8">
       <h1 class="text-xl font-bold mb-2">Анкеты участника:</h1>
     </div>
+
+    <FormKit
+    type="text"
+    name="name"  
+    label="Ваше ФИО"
+    validation="required|length:5"
+    :validation-messages="{ required: 'Пожалуйста, введите ФИО' }"
+    />
+
+    <FormKit
+    type="textarea"
+    name="organisation"  
+    label="Ваша организация"
+    validation="required|length:3"
+    :validation-messages="{ required: 'Пожалуйста, заполните поле' }"
+    />
 
     <FormKit
     type="radio"
