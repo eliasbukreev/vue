@@ -1,6 +1,6 @@
 import {createRouter, createMemoryHistory} from 'vue-router'
 import Home from '../components/Home.vue'
-import PeriodicControl from '../components/Periodic control.vue'
+import PeriodicControl from '../components/PeriodicControl.vue'
 
 const routes = [
     {path: "/", component: Home},

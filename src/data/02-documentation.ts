@@ -116,23 +116,23 @@ export const documentation = [
   },
   {
     $formkit: 'text',
-    name: 'commissionMemberfio1',
+    name: 'commissionMemberfio3',
     label: 'ФИО',
   },
   {
     $formkit: 'text',
-    name: 'commissionMemberposition1',
+    name: 'commissionMemberposition3',
     label: 'Должность',
   },
   {
     $formkit: 'text',
-    name: 'commissionMembernumber1',
+    name: 'commissionMembernumber3',
     label: 'Номер приказа о назначении ',
     placeholder: "№ 00000000000000000"
   },
   {
     $formkit: 'file',
-    name: 'commissionMemberfile1',
+    name: 'commissionMemberfile3',
     label: 'Приложение',
     accept: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",
     help: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",

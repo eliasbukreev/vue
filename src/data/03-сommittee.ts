@@ -1,106 +1,145 @@
-export const committee = [
+export function getCommmitteeSchema(value: string, map:Record<string,string>) {
+
+    const key = map[value]
+
+    return [
   {
     $el: 'h1',
-    children: 'Комиссии',
+    children: value ,
     attrs: {
       class: 'text-xl font-bold mb-4',
-      id: "PersonalData"
     },
+  },
+  {
+    $el: 'h2',
+    children: 'Глава комиссии',
+    attrs: {
+      class: 'text-md font-bold mb-2',
+    },
+  },
+  {
+    $formkit: 'text',
+    name: `commission${key}Chairmanfio`,
+    label: 'ФИО',
+  },
+  {
+    $formkit: 'text',
+    name: `commission${key}Chairmanposition`,
+    label: 'Должность',
+  },
+  {
+    $formkit: 'text',
+    name: `commission${key}Chairmannumber`,
+    label: 'Номер приказа о назначении ',
+    placeholder: "№ 00000000000000000"
+  },
+  {
+    $formkit: 'file',
+    name: `commission${key}Chairmanfile`,
+    label: 'Приложение',
+    accept: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",
+    help: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",
+    multiple: "false",
+  },
+  {
+    $el: 'h2',
+    children: 'Члены комиссии',
+    attrs: {
+      class: 'text-md font-bold mb-2',
+    },
+  },
+  {
+    $el: 'p',
+    children: 'Первый член комиссии',
+    attrs: {
+      class: 'text-sm  font-bold mb-2',
+    },
+  },
+  {
+    $formkit: 'text',
+    name: `commission${key}Memberfio1`,
+    label: 'ФИО',
+  },
+  {
+    $formkit: 'text',
+    name: `commission${key}Memberposition1`,
+    label: 'Должность',
+  },
+  {
+    $formkit: 'text',
+    name: `commission${key}Membernumber1`,
+    label: 'Номер приказа о назначении ',
+    placeholder: "№ 00000000000000000"
+  },
+  {
+    $formkit: 'file',
+    name: `commission${key}Memberfile1`,
+    label: 'Приложение',
+    accept: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",
+    help: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",
+    multiple: "false",
+  },
+    {
+    $el: 'p',
+    children: 'Второй член комиссии',
+    attrs: {
+      class: 'text-sm font-bold mb-2',
+    },
+  },
+  {
+    $formkit: 'text',
+    name: `commission${key}Memberfio2`,
+    label: 'ФИО',
+  },
+  {
+    $formkit: 'text',
+    name: `commission${key}Memberposition2`,
+    label: 'Должность',
+  },
+  {
+    $formkit: 'text',
+    name: `commission${key}Membernumber2`,
+    label: 'Номер приказа о назначении ',
+    placeholder: "№ 00000000000000000"
+  },
+  {
+    $formkit: 'file',
+    name: `commission${key}Memberfile2`,
+    label: 'Приложение',
+    accept: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",
+    help: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",
+    multiple: "false",
+  },
+    {
+    $el: 'p',
+    children: 'Третий член комиссии',
+    attrs: {
+      class: 'text-sm  font-bold mb-2',
+    },
+  },
+  {
+    $formkit: 'text',
+    name: `commission${key}Memberfio3`,
+    label: 'ФИО',
+  },
+  {
+    $formkit: 'text',
+    name: `commission${key}Memberposition3`,
+    label: 'Должность',
+  },
+  {
+    $formkit: 'text',
+    name: `commission${key}Membernumber3`,
+    label: 'Номер приказа о назначении ',
+    placeholder: "№ 00000000000000000"
+  },
+  {
+    $formkit: 'file',
+    name: `commission${key}Memberfile3`,
+    label: 'Приложение',
+    accept: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",
+    help: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",
+    multiple: "false",
   },
 ]
-
-export class Member {
-    counter: Record<string, number> = {
-        "PersonalData": 0,
-    }
-
-    schema: any[] = [] 
-
-    templateGroup(key: string, value: number) {
-        return {
-            $formkit: 'group',
-            name: `${key}Member${value}`,
-            label: `Участник ${value}`,
-            children: [
-                {
-                    $formkit: 'text',
-                    name: `commission${key}Memberfio${value}`,
-                    label: 'ФИО',
-                },
-                {
-                    $formkit: 'text',
-                    name: `commission${key}Memberposition${value}`,
-                    label: 'Должность',
-                },
-                {
-                    $formkit: 'text',
-                    name: `commission${key}Membernumber${value}`,
-                    label: 'Номер приказа о назначении',
-                    placeholder: "№ 00000000000000000"
-                },
-                {
-                    $formkit: 'file',
-                    name: `commission${key}Memberfile${value}`,
-                    label: 'Приложение',
-                    accept: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",
-                    help: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",
-                    multiple: "false",
-                },
-            ]
-        }
-    }
-
-    addMember(key: string) {
-        this.counter[key] = (this.counter[key] || 0) + 1
-        const value = this.counter[key]
-        const group = this.templateGroup(key, value)
-        this.schema.push(group)
-    }
-
-    deleteMember(key: string, value: number) {
-        this.schema = this.schema.filter(group => group.name !== `${key}Member${value}`)
-    }
-}
-
-const temp = [  {
-    $el: 'h2',
-    children: 'Состав комиссии по уничтожению персональных данных',
-    attrs: {
-      class: 'text-md font-bold mb-2',
-    },
-  },
-  {
-    $el: 'h2',
-    children: ' Состав комиссии по уничтожению СКЗИ',
-    attrs: {
-      class: 'text-md font-bold mb-2',
-    },
-  },
-  {
-    $el: 'h2',
-    children: ' Состав комиссии по реагированию на инциденты ИБ',
-    attrs: {
-      class: 'text-md font-bold mb-2',
-    },
-  },
-  {
-    $el: 'h2',
-    children: 'Перечень лиц, допущенных к обработке ПДн',
-    attrs: {
-      class: 'text-md font-bold mb-2',
-    },
-  },
-  {
-    $el: 'h2',
-    children: 'Перечень лиц, допущенных к работе с СКЗИ',
-    attrs: {
-      class: 'text-md font-bold mb-2',
-    },
-  },
-  {
-    $el: 'h2',
-    children: 'Перечень лиц, допущенных к работе в ИС',
-    attrs: {
-      class: 'text-md font-bold mb-2',
-    },
-  },]
+} 
