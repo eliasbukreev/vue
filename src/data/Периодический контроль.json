@@ -1,29 +1,27 @@
-[  
+[
   {
     "title": "c",
     "groups": [
       {
         "type": "organisation_description",
-        "items": [
-          {}
-        ]
+        "items": [{}]
       },
       {
         "type": "textarea_with_label",
         "items": [
           {
-            "title":"Наименование информационной системы",
+            "title": "Наименование информационной системы",
             "attribute": "system_name",
-            "placeholder" : "Наименования информационных систем с которыми ведется взаимодействие (Например: ГИС ПК 'РСМЭД', ГИС ПК 'РПГУ', ГИС ПК 'РИСОГД ПК', ФИС 'ГИА и Приема', ГИС 'АИСТ ГБД', ФИС 'ГНА', ФИС 'ФРДО', ИС АКНДПП, ГИС 'Региональное образование')"
+            "placeholder": "Наименования информационных систем с которыми ведется взаимодействие (Например: ГИС ПК 'РСМЭД', ГИС ПК 'РПГУ', ГИС ПК 'РИСОГД ПК', ФИС 'ГИА и Приема', ГИС 'АИСТ ГБД', ФИС 'ГНА', ФИС 'ФРДО', ИС АКНДПП, ГИС 'Региональное образование')"
           },
           {
-            "title":"НПА о создании и/или функционировании ГИС",
+            "title": "НПА о создании и/или функционировании ГИС",
             "attribute": "legal_docs"
           },
           {
-            "title":"Адрес нахождения информационной системы",
+            "title": "Адрес нахождения информационной системы",
             "attribute": "system_address",
-            "placeholder" : "Г. Владивосток ул. Светланская д.1"
+            "placeholder": "Г. Владивосток ул. Светланская д.1"
           }
         ]
       }
@@ -40,97 +38,97 @@
             "checkbox_label": "Нет"
           }
         ]
-      }, 
+      },
       {
         "type": "fullname_with_position_and_order",
-        "items" : [
-            {
-                "title" : "Ответственный за обеспечение безопастности (администратор безопастности)",
-                "attribute" : "security_administrator",
-                "checkbox" : "True"
-            },
-            {
-                "title" : "Ответственный за обработку персональных данных",
-                "attribute" : "personal_data_administrator",
-                "checkbox" : "True"
-            },
-            {
-                "title" : "Ответственный за хранение и эксплуатацию СКЗИ",
-                "attribute" : "skzi_administrator",
-                "checkbox" : "True"
-            },
-            {
-                "title" : "Ответственных за планирование и контроль мероприятий по защите информации в информационной системе",
-                "attribute" : "control_administrator",
-                "checkbox" : "True"
-            }
+        "items": [
+          {
+            "title": "Ответственный за обеспечение безопастности (администратор безопастности)",
+            "attribute": "security_administrator",
+            "checkbox": "True"
+          },
+          {
+            "title": "Ответственный за обработку персональных данных",
+            "attribute": "personal_data_administrator",
+            "checkbox": "True"
+          },
+          {
+            "title": "Ответственный за хранение и эксплуатацию СКЗИ",
+            "attribute": "skzi_administrator",
+            "checkbox": "True"
+          },
+          {
+            "title": "Ответственных за планирование и контроль мероприятий по защите информации в информационной системе",
+            "attribute": "control_administrator",
+            "checkbox": "True"
+          }
         ]
       },
       {
-            "type" : "controller_add_delete_member",
-            "items" : [
-                {
-                    "title" : "Состав комиссии по уничтожению персональных данных",
-                    "label" : "Член Комиссии по уничтожению персональных данных",
-                    "attribute" : "personal_destroy_member",
-                    "template" : "fullname_with_position_and_order_element"
-                }
-            ]
+        "type": "controller_add_delete_member",
+        "items": [
+          {
+            "title": "Состав комиссии по уничтожению персональных данных",
+            "label": "Член Комиссии по уничтожению персональных данных",
+            "attribute": "personal_destroy_member",
+            "template": "fullname_with_position_and_order_element"
+          }
+        ]
       },
       {
-            "type" : "controller_add_delete_member",
-            "items" : [
-                {
-                    "title" : "Состав комиссии по уничтожению СКЗИ",
-                    "label" : "Член Комиссии по уничтожению СКЗИ",
-                    "attribute" : "skzi_destroy_member",
-                    "template" : "fullname_with_position_and_order_element"
-                }
-            ]
+        "type": "controller_add_delete_member",
+        "items": [
+          {
+            "title": "Состав комиссии по уничтожению СКЗИ",
+            "label": "Член Комиссии по уничтожению СКЗИ",
+            "attribute": "skzi_destroy_member",
+            "template": "fullname_with_position_and_order_element"
+          }
+        ]
       },
       {
-            "type" : "controller_add_delete_member",
-            "items" : [
-                {
-                    "title" : "Состав комиссии по реагированию на инциденты ИБ",
-                    "label" : "Член Комиссии по реагированию на инциденты ИБ",
-                    "attribute" : "reaction_member",
-                    "template" : "fullname_with_position_and_order_element"
-                }
-            ]
-      }, 
-      {
-            "type" : "controller_add_delete_member",
-            "items" : [
-                {
-                    "title" : "Перечень лиц, допущенных к обработке ПДн",
-                    "label" : "Должностное лицо допущенное к обработке ПДн",
-                    "attribute" : "pdn_list_member",
-                    "template" : "fullname_with_position_and_order_element"
-                }
-            ]
+        "type": "controller_add_delete_member",
+        "items": [
+          {
+            "title": "Состав комиссии по реагированию на инциденты ИБ",
+            "label": "Член Комиссии по реагированию на инциденты ИБ",
+            "attribute": "reaction_member",
+            "template": "fullname_with_position_and_order_element"
+          }
+        ]
       },
       {
-            "type" : "controller_add_delete_member",
-            "items" : [
-                {
-                    "title" : "Перечень лиц, допущенных к работе с СКЗИ",
-                    "label" : "Должностное лицо допущенное к работе с СКЗИ",
-                    "attribute" : "skzi_list_member",
-                    "template" : "fullname_with_position_and_order_element"
-                }
-            ]
+        "type": "controller_add_delete_member",
+        "items": [
+          {
+            "title": "Перечень лиц, допущенных к обработке ПДн",
+            "label": "Должностное лицо допущенное к обработке ПДн",
+            "attribute": "pdn_list_member",
+            "template": "fullname_with_position_and_order_element"
+          }
+        ]
       },
       {
-            "type" : "controller_add_delete_member",
-            "items" : [
-                {
-                    "title" : "Перечень лиц, допущенных к работе в ИС",
-                    "label" : "Должностное лицо допущенное к работе в ИС",
-                    "attribute" : "is_list_member",
-                    "template" : "fullname_with_position_and_order_element"
-                }
-            ]
+        "type": "controller_add_delete_member",
+        "items": [
+          {
+            "title": "Перечень лиц, допущенных к работе с СКЗИ",
+            "label": "Должностное лицо допущенное к работе с СКЗИ",
+            "attribute": "skzi_list_member",
+            "template": "fullname_with_position_and_order_element"
+          }
+        ]
+      },
+      {
+        "type": "controller_add_delete_member",
+        "items": [
+          {
+            "title": "Перечень лиц, допущенных к работе в ИС",
+            "label": "Должностное лицо допущенное к работе в ИС",
+            "attribute": "is_list_member",
+            "template": "fullname_with_position_and_order_element"
+          }
+        ]
       }
     ]
   },
@@ -147,239 +145,237 @@
         ]
       }
     ]
-  }, 
+  },
   {
     "title": "Журналы",
     "groups": [
-        {
-            "type" : "upload_one_photo",
-            "items" : [
-                {
-                    "title" : "Журнал учёта машинных носителей информации",
-                    "checkbox_label": "Нет"
-                },
-                {
-                    "title" : "Журнал учёта съёмных носителей информации и фиксации факта их выдачи/приёма сотрудникам организации",
-                    "checkbox_label": "Нет"
-                },
-                {
-                    "title" : "Журнал учёта средств защиты информации",
-                    "checkbox_label": "Нет"
-                },
-                {
-                    "title" : "Журнал учёта СКЗИ",
-                    "checkbox_label": "Нет"
-                },
-                {
-                    "title" : "Журнал периодического тестирования средств защиты информации",
-                    "checkbox_label": "Нет"
-                },
-                {
-                    "title" : "Журнал проведения инструктажей ИБ",
-                    "checkbox_label": "Нет"
-                },
-                {
-                    "title" : "План периодических мероприятий ИБ",
-                    "checkbox_label": "Нет"
-                },
-                {
-                    "title" : "Документ с отметками проведения периодических мероприятий",
-                    "checkbox_label": "Нет"
-                }
-            ]
-        }
+      {
+        "type": "upload_one_photo",
+        "items": [
+          {
+            "title": "Журнал учёта машинных носителей информации",
+            "checkbox_label": "Нет"
+          },
+          {
+            "title": "Журнал учёта съёмных носителей информации и фиксации факта их выдачи/приёма сотрудникам организации",
+            "checkbox_label": "Нет"
+          },
+          {
+            "title": "Журнал учёта средств защиты информации",
+            "checkbox_label": "Нет"
+          },
+          {
+            "title": "Журнал учёта СКЗИ",
+            "checkbox_label": "Нет"
+          },
+          {
+            "title": "Журнал периодического тестирования средств защиты информации",
+            "checkbox_label": "Нет"
+          },
+          {
+            "title": "Журнал проведения инструктажей ИБ",
+            "checkbox_label": "Нет"
+          },
+          {
+            "title": "План периодических мероприятий ИБ",
+            "checkbox_label": "Нет"
+          },
+          {
+            "title": "Документ с отметками проведения периодических мероприятий",
+            "checkbox_label": "Нет"
+          }
+        ]
+      }
     ]
   },
   {
     "title": "Инструкции",
     "groups": [
-        {
-            "type" : "upload_one_photo",
-            "items" : [
-                {
-                    "title" : "Инструкция администратора ИБ"
-                },
-                {
-                    "title" : "Инструкция ответственного за организацию обработки персональных данных"
-                },
-                {
-                    "title" : "Инструкция по реагированию на инциденты информационной безопасности"
-                },
-                {
-                    "title" : "Инструкция пользователя"
-                }
-            ]
-        }
+      {
+        "type": "upload_one_photo",
+        "items": [
+          {
+            "title": "Инструкция администратора ИБ"
+          },
+          {
+            "title": "Инструкция ответственного за организацию обработки персональных данных"
+          },
+          {
+            "title": "Инструкция по реагированию на инциденты информационной безопасности"
+          },
+          {
+            "title": "Инструкция пользователя"
+          }
+        ]
+      }
     ]
   },
   {
     "title": "Прикладной блок",
     "groups": [
-        {
-            "type" : "arm_controller",
-            "items" : [
-                {}
-            ]
-        },
-        {
-            "type" : "upload_one_photo",
-            "items" : [
-                {
-                    "title" : "Разрешённое ПО",
-                    "checkbox_label": "Нет"
-                }
-            ]
-        },
-        {
-            "type" : "upload_one_photo",
-            "items" : [
-                {
-                    "title" : "Анализ защищённости",
-                    "checkbox_label": "Нет"
-                }
-            ]
-        },
-        
-        {  
-            "type" : "upload_one_photo",
-            "items" : [
-                {
-                    "title" : "Приложение к модели угроз",
-                    "checkbox_label": "Нет"
-                }
-            ]
-        },
-        {
-            "type" : "textarea_with_label",
-            "items" : [
-                {
-                    "title" : "Техническое задание",
-                    "attribute": "technical_task"
-                }
-            ]
-        },
-        {  
-            "type" : "upload_one_photo",
-            "items" : [
-                {
-                    "title" : "Приложение к техническое заданию",
-                    "checkbox_label": "Нет"
-                }
-            ]
-        },
-        {
-            "type" : "textarea_with_label",
-            "items" : [
-                {
-                    "title" : "Проект СЗИ",
-                    "attribute": "szi_project"
-                }
-            ]
-        },
-        {  
-            "type" : "upload_one_photo",
-            "items" : [
-                {
-                    "title" : "Приложение к проекту СЗИ",
-                    "checkbox_label": "Нет"
-                }
-            ]
-        }
+      {
+        "type": "arm_controller",
+        "items": [{}]
+      },
+      {
+        "type": "upload_one_photo",
+        "items": [
+          {
+            "title": "Разрешённое ПО",
+            "checkbox_label": "Нет"
+          }
+        ]
+      },
+      {
+        "type": "upload_one_photo",
+        "items": [
+          {
+            "title": "Анализ защищённости",
+            "checkbox_label": "Нет"
+          }
+        ]
+      },
+
+      {
+        "type": "upload_one_photo",
+        "items": [
+          {
+            "title": "Приложение к модели угроз",
+            "checkbox_label": "Нет"
+          }
+        ]
+      },
+      {
+        "type": "textarea_with_label",
+        "items": [
+          {
+            "title": "Техническое задание",
+            "attribute": "technical_task"
+          }
+        ]
+      },
+      {
+        "type": "upload_one_photo",
+        "items": [
+          {
+            "title": "Приложение к техническое заданию",
+            "checkbox_label": "Нет"
+          }
+        ]
+      },
+      {
+        "type": "textarea_with_label",
+        "items": [
+          {
+            "title": "Проект СЗИ",
+            "attribute": "szi_project"
+          }
+        ]
+      },
+      {
+        "type": "upload_one_photo",
+        "items": [
+          {
+            "title": "Приложение к проекту СЗИ",
+            "checkbox_label": "Нет"
+          }
+        ]
+      }
     ]
   },
   {
     "title": "Огранизационный блок",
     "groups": [
-        {
-            "type" : "textarea_with_label",
-            "items" : [
-                {
-                    "title" : "Расположение аттестованных АРМ серверов",
-                    "attribute": "arm_location"
-                }
-            ]
-        },
-        {
-            "type" : "upload_one_photo",
-            "items" : [
-                {
-                    "title" : "Формуляры",
-                    "checkbox_label": "Нет"
-                },
-                {
-                    "title" : "Проведения плановых мероприятий по ИБ",
-                    "checkbox_label": "Нет"
-                },                
-                {
-                    "title" : "Приказ о вводе в эксплуатацию",
-                    "checkbox_label": "Нет"
-                }
-            ]
-        },        
-        {
-            "type" : "textarea_with_input",
-            "items" : [
-                {
-                    "title" : "Перечень помещений, в которых разрешена работа с ресурсами ИС",
-                    "textarea_title" : "Описание контролируемой зоны.",
-                    "input_title" : "Номер приказ о утверждении.",
-                    "attribute" : "is_list_rooms",
-                    "template" : "fullname_with_position_and_order_element"
-                },
-                {
-                    "title" : "Перечень статических маршрутов",
-                    "textarea_title" : "Перечень маршрутов.",
-                    "input_title" : "Номер приказ о утверждении.",
-                    "attribute" : "list_routers",
-                    "template" : "fullname_with_position_and_order_element"
-                },
-                {
-                    "title" : "Перечень разрешенного прикладного и общесистемного программного обеспечения (ПО) в информационной системе",
-                    "textarea_title" : "Перечень разрешённого ПО.",
-                    "input_title" : "Номер приказ о утверждении.",
-                    "attribute" : "list_software",
-                    "template" : "fullname_with_position_and_order_element"
-                }
-            ]
-        }
+      {
+        "type": "textarea_with_label",
+        "items": [
+          {
+            "title": "Расположение аттестованных АРМ серверов",
+            "attribute": "arm_location"
+          }
+        ]
+      },
+      {
+        "type": "upload_one_photo",
+        "items": [
+          {
+            "title": "Формуляры",
+            "checkbox_label": "Нет"
+          },
+          {
+            "title": "Проведения плановых мероприятий по ИБ",
+            "checkbox_label": "Нет"
+          },
+          {
+            "title": "Приказ о вводе в эксплуатацию",
+            "checkbox_label": "Нет"
+          }
+        ]
+      },
+      {
+        "type": "textarea_with_input",
+        "items": [
+          {
+            "title": "Перечень помещений, в которых разрешена работа с ресурсами ИС",
+            "textarea_title": "Описание контролируемой зоны.",
+            "input_title": "Номер приказ о утверждении.",
+            "attribute": "is_list_rooms",
+            "template": "fullname_with_position_and_order_element"
+          },
+          {
+            "title": "Перечень статических маршрутов",
+            "textarea_title": "Перечень маршрутов.",
+            "input_title": "Номер приказ о утверждении.",
+            "attribute": "list_routers",
+            "template": "fullname_with_position_and_order_element"
+          },
+          {
+            "title": "Перечень разрешенного прикладного и общесистемного программного обеспечения (ПО) в информационной системе",
+            "textarea_title": "Перечень разрешённого ПО.",
+            "input_title": "Номер приказ о утверждении.",
+            "attribute": "list_software",
+            "template": "fullname_with_position_and_order_element"
+          }
+        ]
+      }
     ]
   },
   {
     "title": "Процесс ознакомления сотрудников с ОРД",
     "groups": [
-        {
-            "type" : "upload_one_photo",
-            "items" : [
-                {
-                    "title" : "Cписок ознакомления с Политикой ИБ",
-                    "checkbox_label": "Нет"
-                },
-                {
-                    "title" : "Cписок ознакомления с Политикой обработки ПДн",
-                    "checkbox_label": "Нет"
-                },
-                {
-                    "title" : "Cписок ознакомления с Политикой обработки ПДн на бумажных носителях",
-                    "checkbox_label": "Нет"
-                },
-                {
-                    "title" : "Cписок ознакомления с Инструкцией пользователя",
-                    "checkbox_label": "Нет"
-                },
-                {
-                    "title" : "Cписок ознакомления с Инструкцией администратора",
-                    "checkbox_label": "Нет"
-                },
-                {
-                    "title" : "Cписок ознакомления с Инструкцией пользователя СКЗИ",
-                    "checkbox_label": "Нет"
-                },
-                {
-                    "title" : "Cписок ознакомления с Инструкция реагирования на инциденты ИБ",
-                    "checkbox_label": "Нет"
-                }
-            ]
-        }
+      {
+        "type": "upload_one_photo",
+        "items": [
+          {
+            "title": "Cписок ознакомления с Политикой ИБ",
+            "checkbox_label": "Нет"
+          },
+          {
+            "title": "Cписок ознакомления с Политикой обработки ПДн",
+            "checkbox_label": "Нет"
+          },
+          {
+            "title": "Cписок ознакомления с Политикой обработки ПДн на бумажных носителях",
+            "checkbox_label": "Нет"
+          },
+          {
+            "title": "Cписок ознакомления с Инструкцией пользователя",
+            "checkbox_label": "Нет"
+          },
+          {
+            "title": "Cписок ознакомления с Инструкцией администратора",
+            "checkbox_label": "Нет"
+          },
+          {
+            "title": "Cписок ознакомления с Инструкцией пользователя СКЗИ",
+            "checkbox_label": "Нет"
+          },
+          {
+            "title": "Cписок ознакомления с Инструкция реагирования на инциденты ИБ",
+            "checkbox_label": "Нет"
+          }
+        ]
+      }
     ]
   }
 ]
