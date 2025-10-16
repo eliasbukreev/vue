@@ -27,3 +27,7 @@ export async function submit(payload: Record<string, any>, router: Router) {
     router.push('/')
   }
 }
+
+export async function testSubmit(payload: Record<string, any>) {
+    alert(JSON.stringify(payload))
+}

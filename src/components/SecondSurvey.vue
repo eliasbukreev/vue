@@ -13,7 +13,7 @@ function handleSubmit(value: Record<string, any>) {
 const choice = ref<string | undefined>(undefined)
 const choice_2 = ref<string | undefined>(undefined)
 const choice_3 = ref<string | undefined>(undefined)
-const choice_4 = ref<string | undefined>(undefined)
+const vendors = ref<string [] | undefined>(undefined)
 </script>
 
 <template>
@@ -203,36 +203,33 @@ const choice_4 = ref<string | undefined>(undefined)
 
 
     <FormKit
-    type="select"
+    type="checkbox"
     name="vendor_product"
     label="Пилот продуктов какого вендора интересует:"
-    placeholder="Выберите один из вариантов"
     :options="[
-        { value: 'eshelon', label: 'Эшелон' },
-        { value: 'infoteks', label: 'ИнфоТеКС' },
-        { value: 'crosstech', label: 'Кросстех Солюшнс Групп' },
-        { value: 'code', label: 'Код безопасности' },
-        { value: 'active', label: 'Актив-Софт' },
-        { value: 'indid', label: 'Индид' },
-        { value: 'infowatch', label: 'ИнфоВотч' },
-        { value: 'offies', label: 'Мой Офис (Новые облачные технологии)'},
-
+        'Эшелон',
+        'ИнфоТеКС',
+        'Кросстех Солюшнс Групп',
+        'Код безопасности',
+        'Актив-Софт',
+        'Индид',
+        'ИнфоВотч',
+        'Мой Офис (Новые облачные технологии)',
     ]"
-    validation="required"
-    :validation-messages="{ required: 'Выберите один вариант' }"
-    v-model="choice_4"
+    v-model="vendors"
     />
 
-    <Transition name="fade-slide" mode="out-in">
+    <Transition v-for = "vendor in vendors" name="fade-slide" mode="out-in">
     <FormKit
-    v-if="choice_4"
-    type="textarea"
-    name="vendor"
-    placeholder="Укажите, какой продукт"
+    type="text"
+    :name = "vendor"
+    :label = "`Укажите интересующий продукт ${vendor}`"
     validation="required"
-    :validation-messages="{ required: 'Укажите, какой продукт' }"
+    :validation-messages="{ required: 'Пожалуйста, укажите продукт' }"
     />
     </Transition>
+
+
 
     </FormKit>
     
