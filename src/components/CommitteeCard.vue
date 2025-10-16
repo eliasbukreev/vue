@@ -2,23 +2,23 @@
 import ListInForms from "./ListInForms.vue";
 import { getCommmitteeSchema } from "../data/03-сommittee";
 import { ref } from "vue";
+import type { FormKitSchemaNode } from "@formkit/core";
 
-const map: Record<string, string> = {
-  "Состав комиссии по уничтожению персональных данных": "PersonalData",
-  "Состав комиссии по уничтожению СКЗИ": "Skzi",
-  "Состав комиссии по реагированию на инциденты ИБ": "Ib",
-  "Перечень лиц, допущенных к обработке ПДн": "Pdn",
-  "Перечень лиц, допущенных к работе с СКЗИ": "Skzi",
-  "Перечень лиц, допущенных к работе в ИС": "Is",
-};
-
-const Tabs = Object.keys(map);
+const Tabs: string[] = [
+  "Состав комиссии по уничтожению персональных данных",
+  "Состав комиссии по уничтожению СКЗИ",
+  "Состав комиссии по реагированию на инциденты ИБ",
+  "Перечень лиц, допущенных к обработке ПДн",
+  "Перечень лиц, допущенных к работе с СКЗИ",
+  "Перечень лиц, допущенных к работе в ИС",
+];
 
 const tab = ref<string | null>(null);
 
-const commmittees: Record<string, unknown[]> = {};
+const commmittees: Record<string, FormKitSchemaNode[]> = {};
 Tabs.forEach((tabName) => {
-  commmittees[tabName] = getCommmitteeSchema(tabName, map);
+  commmittees[tabName] = getCommmitteeSchema(tabName);
+  console.log(tabName, getCommmitteeSchema(tabName));
 });
 </script>
 
@@ -32,10 +32,9 @@ Tabs.forEach((tabName) => {
   >
     <span class="text-gray-400">/</span> Открыть другую комисию
   </div>
-
-  <div class="form-body">
-    <section v-for="tabName in Tabs" :key="tabName" v-show="tab === tabName">
+  <section v-for="tabName in Tabs" :key="tabName">
+    <div v-show="tab === tabName">
       <FormKitSchema :schema="commmittees[tabName]" />
-    </section>
-  </div>
+    </div>
+  </section>
 </template>

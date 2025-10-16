@@ -8,136 +8,166 @@ export const documentation = [
   },
   {
     $formkit: "file",
-    name: "tech_passport",
+    name: "Технический паспорт",
     label: "Технический паспорт",
     accept: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",
     help: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",
     multiple: "false",
   },
   {
-    $el: "h2",
-    children:
+    $formkit: "group",
+    name: "Ответственный за обеспечение безопастности (администратор безопастности)",
+    label:
       "Ответственный за обеспечение безопастности (администратор безопастности)",
-    attrs: {
-      class: "text-md font-bold mb-2",
-    },
+    children: [
+      {
+        $el: "h2",
+        children:
+          "Ответственный за обеспечение безопастности (администратор безопастности)",
+        attrs: {
+          class: "text-md font-bold mb-2",
+        },
+      },
+      {
+        $formkit: "text",
+        name: "ФИО",
+        label: "ФИО",
+      },
+      {
+        $formkit: "text",
+        name: "Должность",
+        label: "Должность",
+      },
+      {
+        $formkit: "text",
+        name: "Номер приказа о назначении",
+        label: "Номер приказа о назначении ",
+        placeholder: "№ 00000000000000000",
+      },
+      {
+        $formkit: "file",
+        name: "Приложение",
+        label: "Приложение",
+        accept: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",
+        help: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",
+        multiple: "false",
+      },
+    ],
   },
   {
-    $formkit: "text",
-    name: "commissionChairmanfio",
-    label: "ФИО",
+    $formkit: "group",
+    name: "Ответственный за обработку персональных данных",
+    label: "Ответственный за обработку персональных данных",
+    children: [
+      {
+        $el: "h2",
+        children: "Ответственный за обработку персональных данных",
+        attrs: {
+          class: "text-md font-bold mb-2",
+        },
+      },
+      {
+        $formkit: "text",
+        name: "ФИО",
+        label: "ФИО",
+      },
+      {
+        $formkit: "text",
+        name: "Должность",
+        label: "Должность",
+      },
+      {
+        $formkit: "text",
+        name: "Номер приказа о назначении",
+        label: "Номер приказа о назначении ",
+        placeholder: "№ 00000000000000000",
+      },
+      {
+        $formkit: "file",
+        name: "Приложение",
+        label: "Приложение",
+        accept: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",
+        help: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",
+        multiple: "false",
+      },
+    ],
   },
   {
-    $formkit: "text",
-    name: "commissionChairmanposition",
-    label: "Должность",
+    $formkit: "group",
+    name: "Ответственный за хранение и эксплуатацию СКЗИ",
+    label: "Ответственный за хранение и эксплуатацию СКЗИ",
+    children: [
+      {
+        $el: "h2",
+        children: "Ответственный за хранение и эксплуатацию СКЗИ",
+        attrs: {
+          class: "text-md font-bold mb-2",
+        },
+      },
+      {
+        $formkit: "text",
+        name: "ФИО",
+        label: "ФИО",
+      },
+      {
+        $formkit: "text",
+        name: "Должность",
+        label: "Должность",
+      },
+      {
+        $formkit: "text",
+        name: "Номер приказа о назначении",
+        label: "Номер приказа о назначении ",
+        placeholder: "№ 00000000000000000",
+      },
+      {
+        $formkit: "file",
+        name: "Приложение",
+        label: "Приложение",
+        accept: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",
+        help: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",
+        multiple: "false",
+      },
+    ],
   },
   {
-    $formkit: "text",
-    name: "commissionChairmannumber",
-    label: "Номер приказа о назначении ",
-    placeholder: "№ 00000000000000000",
-  },
-  {
-    $formkit: "file",
-    name: "commissionChairmanfile",
-    label: "Приложение",
-    accept: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",
-    help: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",
-    multiple: "false",
-  },
-  {
-    $el: "h2",
-    children: "Ответственный за обработку персональных данных",
-    attrs: {
-      class: "text-md font-bold mb-2",
-    },
-  },
-  {
-    $formkit: "text",
-    name: "commissionMemberfio1",
-    label: "ФИО",
-  },
-  {
-    $formkit: "text",
-    name: "commissionMemberposition1",
-    label: "Должность",
-  },
-  {
-    $formkit: "text",
-    name: "commissionMembernumber1",
-    label: "Номер приказа о назначении ",
-    placeholder: "№ 00000000000000000",
-  },
-  {
-    $formkit: "file",
-    name: "commissionMemberfile1",
-    label: "Приложение",
-    accept: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",
-    help: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",
-    multiple: "false",
-  },
-  {
-    $el: "h2",
-    children: "Ответственный за хранение и эксплуатацию СКЗИ",
-    attrs: {
-      class: "text-md font-bold mb-2",
-    },
-  },
-  {
-    $formkit: "text",
-    name: "commissionMemberfio2",
-    label: "ФИО",
-  },
-  {
-    $formkit: "text",
-    name: "commissionMemberposition2",
-    label: "Должность",
-  },
-  {
-    $formkit: "text",
-    name: "commissionMembernumber2",
-    label: "Номер приказа о назначении ",
-    placeholder: "№ 00000000000000000",
-  },
-  {
-    $formkit: "file",
-    name: "commissionMemberfile2",
-    label: "Приложение",
-    accept: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",
-    help: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",
-    multiple: "false",
-  },
-  {
-    $el: "h2",
-    children:
+    $formkit: "group",
+    name: "Ответственных за планирование и контроль мероприятий по защите информации в информационной системе",
+    label:
       "Ответственных за планирование и контроль мероприятий по защите информации в информационной системе",
-    attrs: {
-      class: "text-md font-bold mb-2",
-    },
-  },
-  {
-    $formkit: "text",
-    name: "commissionMemberfio3",
-    label: "ФИО",
-  },
-  {
-    $formkit: "text",
-    name: "commissionMemberposition3",
-    label: "Должность",
-  },
-  {
-    $formkit: "text",
-    name: "commissionMembernumber3",
-    label: "Номер приказа о назначении ",
-    placeholder: "№ 00000000000000000",
-  },
-  {
-    $formkit: "file",
-    name: "commissionMemberfile3",
-    label: "Приложение",
-    accept: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",
-    help: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",
-    multiple: "false",
+    children: [
+      {
+        $el: "h2",
+        children:
+          "Ответственных за планирование и контроль мероприятий по защите информации в информационной системе",
+        attrs: {
+          class: "text-md font-bold mb-2",
+        },
+      },
+      {
+        $formkit: "text",
+        name: "ФИО",
+        label: "ФИО",
+      },
+      {
+        $formkit: "text",
+        name: "Должность",
+        label: "Должность",
+      },
+      {
+        $formkit: "text",
+        name: "Номер приказа о назначении",
+        label: "Номер приказа о назначении ",
+        placeholder: "№ 00000000000000000",
+      },
+      {
+        $formkit: "file",
+        name: "Приложение",
+        label: "Приложение",
+        accept: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",
+        help: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",
+        multiple: "false",
+      },
+    ],
   },
 ];

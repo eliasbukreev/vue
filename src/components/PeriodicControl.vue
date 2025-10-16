@@ -5,6 +5,7 @@ import { submit } from "../utils/submit";
 import { organisation } from "../data/01-organisation";
 import { documentation } from "../data/02-documentation";
 import { cryptographic } from "../data/04-cryptographic";
+import { journals } from "../data/05-journals";
 import { ref } from "vue";
 const tab = ref<string | null>(null);
 
@@ -13,6 +14,7 @@ const Tabs = [
   "Документарный блок",
   "Коммисии",
   "Средства защиты",
+  "Журналы",
 ];
 
 function handleSubmit(value: Record<string, unknown>) {
@@ -46,13 +48,11 @@ function handleSubmit(value: Record<string, unknown>) {
         <section v-show="tab === Tabs[2]">
           <CommitteeCard />
         </section>
-
         <section v-show="tab === Tabs[3]">
           <FormKitSchema :schema="cryptographic" />
         </section>
-
         <section v-show="tab === Tabs[4]">
-          <FormKitSchema :schema="cryptographic" />
+          <FormKitSchema :schema="journals" />
         </section>
       </div>
     </FormKit>
