@@ -19,7 +19,8 @@ export const instructions = [
   {
     $formkit: "file",
     name: "Инструкция по реагированию на инциденты информационной безопасности",
-    label: "Инструкция по реагированию на инциденты информационной безопасности",
+    label:
+      "Инструкция по реагированию на инциденты информационной безопасности",
     accept: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",
     help: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",
     multiple: "false",
@@ -31,5 +32,5 @@ export const instructions = [
     accept: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",
     help: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",
     multiple: "false",
-  }
+  },
 ];

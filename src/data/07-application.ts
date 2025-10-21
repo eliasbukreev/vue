@@ -10,8 +10,7 @@ export const application = [
   {
     $formkit: "file",
     name: "Анализ защищённости",
-    label:
-      "Анализ защищённости",
+    label: "Анализ защищённости",
     accept: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",
     help: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",
     multiple: "false",

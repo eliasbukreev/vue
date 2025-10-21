@@ -10,8 +10,7 @@ export const regulations = [
   {
     $formkit: "file",
     name: "Cписок ознакомления с Политикой обработки ПДн",
-    label:
-      "Cписок ознакомления с Политикой обработки ПДн",
+    label: "Cписок ознакомления с Политикой обработки ПДн",
     accept: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",
     help: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",
     multiple: "false",
@@ -19,7 +18,8 @@ export const regulations = [
   {
     $formkit: "file",
     name: "Cписок ознакомления с Политикой обработки ПДн на бумажных носителях",
-    label: "Cписок ознакомления с Политикой обработки ПДн на бумажных носителях",
+    label:
+      "Cписок ознакомления с Политикой обработки ПДн на бумажных носителях",
     accept: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",
     help: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",
     multiple: "false",
@@ -32,7 +32,7 @@ export const regulations = [
     help: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",
     multiple: "false",
   },
-    {
+  {
     $formkit: "file",
     name: "Cписок ознакомления с Инструкцией администратора",
     label: "Cписок ознакомления с Инструкцией администратора",
@@ -40,7 +40,7 @@ export const regulations = [
     help: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",
     multiple: "false",
   },
-{
+  {
     $formkit: "file",
     name: "Cписок ознакомления с Инструкцией пользователя СКЗИ",
     label: "Cписок ознакомления с Инструкцией пользователя СКЗИ",
@@ -55,5 +55,5 @@ export const regulations = [
     accept: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",
     help: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",
     multiple: "false",
-  }
+  },
 ];
