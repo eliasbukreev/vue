@@ -1,0 +1,43 @@
+export const application = [
+  {
+    $formkit: "file",
+    name: "Разрешённое ПО",
+    label: "Разрешённое ПО",
+    accept: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",
+    help: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",
+    multiple: "false",
+  },
+  {
+    $formkit: "file",
+    name: "Анализ защищённости",
+    label:
+      "Анализ защищённости",
+    accept: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",
+    help: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",
+    multiple: "false",
+  },
+  {
+    $formkit: "file",
+    name: "Модель угроз",
+    label: "Модель угроз",
+    accept: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",
+    help: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",
+    multiple: "false",
+  },
+  {
+    $formkit: "file",
+    name: "Техническое задание",
+    label: "Техническое задание",
+    accept: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",
+    help: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",
+    multiple: "false",
+  },
+  {
+    $formkit: "file",
+    name: "Проект СЗИ",
+    label: "Проект СЗИ",
+    accept: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",
+    help: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",
+    multiple: "false",
+  },
+];

@@ -18,7 +18,6 @@ const tab = ref<string | null>(null);
 const commmittees: Record<string, FormKitSchemaNode[]> = {};
 Tabs.forEach((tabName) => {
   commmittees[tabName] = getCommmitteeSchema(tabName);
-  console.log(tabName, getCommmitteeSchema(tabName));
 });
 </script>
 

@@ -1,0 +1,59 @@
+export const regulations = [
+  {
+    $formkit: "file",
+    name: "Cписок ознакомления с Политикой ИБ",
+    label: "Cписок ознакомления с Политикой ИБ",
+    accept: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",
+    help: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",
+    multiple: "false",
+  },
+  {
+    $formkit: "file",
+    name: "Cписок ознакомления с Политикой обработки ПДн",
+    label:
+      "Cписок ознакомления с Политикой обработки ПДн",
+    accept: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",
+    help: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",
+    multiple: "false",
+  },
+  {
+    $formkit: "file",
+    name: "Cписок ознакомления с Политикой обработки ПДн на бумажных носителях",
+    label: "Cписок ознакомления с Политикой обработки ПДн на бумажных носителях",
+    accept: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",
+    help: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",
+    multiple: "false",
+  },
+  {
+    $formkit: "file",
+    name: "Cписок ознакомления с Инструкцией пользователя",
+    label: "Cписок ознакомления с Инструкцией пользователя",
+    accept: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",
+    help: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",
+    multiple: "false",
+  },
+    {
+    $formkit: "file",
+    name: "Cписок ознакомления с Инструкцией администратора",
+    label: "Cписок ознакомления с Инструкцией администратора",
+    accept: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",
+    help: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",
+    multiple: "false",
+  },
+{
+    $formkit: "file",
+    name: "Cписок ознакомления с Инструкцией пользователя СКЗИ",
+    label: "Cписок ознакомления с Инструкцией пользователя СКЗИ",
+    accept: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",
+    help: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",
+    multiple: "false",
+  },
+  {
+    $formkit: "file",
+    name: "Cписок ознакомления с Инструкция реагирования на инциденты ИБ",
+    label: "Cписок ознакомления с Инструкция реагирования на инциденты ИБ",
+    accept: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",
+    help: ".pdf,.doc,.docx,.xml,.md,.csv,.jpg",
+    multiple: "false",
+  }
+];
