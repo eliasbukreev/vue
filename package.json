@@ -9,7 +9,9 @@
     "preview": "vite preview",
     "lint": "eslint ./src --fix",
     "format": "prettier src/ --write",
-    "style": "stylelint 'src/**/*.{vue,css}' --fix"
+    "style": "stylelint 'src/**/*.{vue,css}' --fix",
+    "lint-check": "eslint ./src",
+    "format-check": "prettier --check src/"
   },
   "dependencies": {
     "20": "^1.0.0",
