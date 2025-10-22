@@ -10,6 +10,7 @@ import { instructions } from "../data/06-instructions";
 import { application } from "../data/07-application";
 import { orgblock } from "../data/08-orgblock";
 import { regulations } from "../data/09-regulations";
+import { arms } from "../data/10-arms";
 import { ref } from "vue";
 const tab = ref<string | null>(null);
 
@@ -23,6 +24,7 @@ const Tabs = [
   "Прикладной блок",
   "Огранизационный блок",
   "Процесс ознакомления сотрудников с ОРД",
+  "ARMs",
 ];
 
 function handleSubmit(value: Record<string, unknown>) {
@@ -73,6 +75,9 @@ function handleSubmit(value: Record<string, unknown>) {
         </section>
         <section v-show="tab === Tabs[8]">
           <FormKitSchema :schema="regulations" />
+        </section>
+        <section v-show="tab === Tabs[9]">
+          <FormKitSchema :schema="arms" />
         </section>
       </div>
     </FormKit>
