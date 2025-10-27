@@ -18,3 +18,21 @@
 </template>
 
 <script setup></script>
+
+<style>
+button:has(.btn-delete) {
+  all: unset; /* сбрасываем стандартные стили */
+  cursor: pointer;
+  display: inline-flex; /* чтобы была в одной линии с текстом, но можно flex контейнер */
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.25rem; /* немного ниже h2 */
+  padding: 0.25rem 0.5rem; /* компактная кнопка */
+  color: #ff0000;
+  background-color: #fff; /* красный */
+  border-radius: 0.25rem; /* скругление */
+  font-weight: bold;
+  font-size: 0.875rem; /* чуть меньше h2 */
+  transition: background-color 0.2s ease;
+}
+</style>
