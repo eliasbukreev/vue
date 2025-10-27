@@ -11,8 +11,7 @@ import { instructions } from "../data/06-instructions";
 import { application } from "../data/07-application";
 import { orgblock } from "../data/08-orgblock";
 import { regulations } from "../data/09-regulations";
-import { ref} from "vue";
-
+import { ref } from "vue";
 
 const tab = ref<string | null>(null);
 
@@ -41,7 +40,6 @@ function handleSubmit(value: Record<string, unknown>) {
 <template>
   <div class="bg-white rounded-xl shadow-xl p-8 mx-auto my-16 max-w-[450px]">
     <FormKit type="form" @submit="handleSubmit">
-
       <ListInForms v-show="!tab" v-model:tab="tab" :Tabs="Tabs" />
       <div
         v-show="tab"
