@@ -4,19 +4,14 @@ import { getCommmitteeSchema } from "../data/03-сommittee";
 import { ref } from "vue";
 import type { FormKitSchemaNode } from "@formkit/core";
 
-const Tabs: string[] = [
-  "Состав комиссии по уничтожению персональных данных",
-  "Состав комиссии по уничтожению СКЗИ",
-  "Состав комиссии по реагированию на инциденты ИБ",
-  "Перечень лиц, допущенных к обработке ПДн",
-  "Перечень лиц, допущенных к работе с СКЗИ",
-  "Перечень лиц, допущенных к работе в ИС",
-];
+const props = defineProps<{
+  Tabs: string[];
+}>();
 
 const tab = ref<string | null>(null);
 
 const commmittees: Record<string, FormKitSchemaNode[]> = {};
-Tabs.forEach((tabName) => {
+props.Tabs.forEach((tabName) => {
   commmittees[tabName] = getCommmitteeSchema(tabName);
 });
 </script>

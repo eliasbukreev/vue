@@ -6,8 +6,9 @@ import { ref } from "vue";
 import { organisation } from "../data/01-organisation";
 import { documentation } from "../data/021-documentation";
 import { security } from "../data/11-security";
-import { access } from "../data/12-access";
+import { access } from "../data/121-access";
 import { informationsecurity } from "../data/13-informationsecurity";
+import { appendix } from "../data/14-appendix";
 
 const tab = ref<string | null>(null);
 
@@ -62,6 +63,9 @@ function handleSubmit(value: Record<string, unknown>) {
         </section>
         <section v-show="tab === Tabs[5]">
           <ARMsCard />
+        </section>
+        <section v-show="tab === Tabs[6]">
+          <FormKitSchema :schema="appendix" />
         </section>
       </div>
     </FormKit>

@@ -1,9 +1,16 @@
 <script setup lang="ts">
 import ListInForms from "./ListInForms.vue";
+import CommitteeCard from "./CommitteeCard.vue";
+import ARMsCard from "./ARMsCard.vue";
 import { submit } from "../utils/submit";
 import { ref } from "vue";
 import { organisation } from "../data/01-organisation";
 import { documentation } from "../data/021-documentation";
+import { security } from "../data/11-security";
+import { access } from "../data/12-access";
+import { informationsecurity } from "../data/13-informationsecurity";
+import { gissetup } from "../data/15-gissetup";
+import { appendix } from "../data/14-appendix";
 
 const tab = ref<string | null>(null);
 
@@ -17,6 +24,15 @@ const Tabs = [
   "Состав ГИС",
   "Прикладной блок",
   "Приложение",
+];
+
+const Commitee: string[] = [
+  "Комиссия по уничтожению ПДн",
+  "Комиссия по уничтожению СКЗИ",
+  "Комиссия по ЗИ",
+  "Комиссия ГРИИБ",
+  "Комиссия по классификации",
+  "Общая комиссия",
 ];
 
 function handleSubmit(value: Record<string, unknown>) {
@@ -50,6 +66,27 @@ function handleSubmit(value: Record<string, unknown>) {
         </section>
         <section v-show="tab === Tabs[1]">
           <FormKitSchema :schema="documentation" />
+        </section>
+        <section v-show="tab === Tabs[2]">
+          <CommitteeCard :Tabs="Commitee" />
+        </section>
+        <section v-show="tab === Tabs[3]">
+          <FormKitSchema :schema="security" />
+        </section>
+        <section v-show="tab === Tabs[4]">
+          <FormKitSchema :schema="access" />
+        </section>
+        <section v-show="tab === Tabs[5]">
+          <FormKitSchema :schema="informationsecurity" />
+        </section>
+        <section v-show="tab === Tabs[6]">
+          <FormKitSchema :schema="gissetup" />
+        </section>
+        <section v-show="tab === Tabs[7]">
+          <ARMsCard />
+        </section>
+        <section v-show="tab === Tabs[8]">
+          <FormKitSchema :schema="appendix" />
         </section>
       </div>
     </FormKit>

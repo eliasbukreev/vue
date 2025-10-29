@@ -27,6 +27,15 @@ const Tabs = [
   "Процесс ознакомления сотрудников с ОРД",
 ];
 
+const Commitee: string[] = [
+  "Состав комиссии по уничтожению персональных данных",
+  "Состав комиссии по уничтожению СКЗИ",
+  "Состав комиссии по реагированию на инциденты ИБ",
+  "Перечень лиц, допущенных к обработке ПДн",
+  "Перечень лиц, допущенных к работе с СКЗИ",
+  "Перечень лиц, допущенных к работе в ИС",
+];
+
 function handleSubmit(value: Record<string, unknown>) {
   if (tab.value) {
     tab.value = null;
@@ -58,7 +67,7 @@ function handleSubmit(value: Record<string, unknown>) {
           <FormKitSchema :schema="documentation" />
         </section>
         <section v-show="tab === Tabs[2]">
-          <CommitteeCard />
+          <CommitteeCard :Tabs="Commitee" />
         </section>
         <section v-show="tab === Tabs[3]">
           <FormKitSchema :schema="cryptographic" />
