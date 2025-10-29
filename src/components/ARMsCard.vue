@@ -40,6 +40,10 @@ function removeARM(tabName: string) {
 </script>
 
 <template>
+  <div>
+    <h2 class="text-md font-bold mb-2">ARMs</h2>
+  </div>
+
   <ListInForms
     v-show="!tab"
     v-model:tab="tab"
@@ -61,7 +65,7 @@ function removeARM(tabName: string) {
     @click="tab = null"
     class="cursor-pointer pl-6 flex items-center text-red-600 hover:text-red-800 font-semibold"
   >
-    <span class="text-gray-400">/</span> Открыть другой ARM
+    <span class="text-gray- 400">/</span> Открыть другой ARM
   </div>
   <FormKit type="group" name="ARMs">
     <section v-for="tabName in Tabs" :key="tabName">

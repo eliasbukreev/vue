@@ -1,30 +1,24 @@
 <script setup lang="ts">
-import CommitteeCard from "./CommitteeCard.vue";
 import ListInForms from "./ListInForms.vue";
 import ARMsCard from "./ARMsCard.vue";
 import { submit } from "../utils/submit";
-import { organisation } from "../data/01-organisation";
-import { documentation } from "../data/02-documentation";
-import { cryptographic } from "../data/04-cryptographic";
-import { journals } from "../data/05-journals";
-import { instructions } from "../data/06-instructions";
-import { application } from "../data/07-application";
-import { orgblock } from "../data/08-orgblock";
-import { regulations } from "../data/09-regulations";
 import { ref } from "vue";
+import { organisation } from "../data/01-organisation";
+import { documentation } from "../data/021-documentation";
+import { security } from "../data/11-security";
+import { access } from "../data/12-access";
+import { informationsecurity } from "../data/13-informationsecurity";
 
 const tab = ref<string | null>(null);
 
 const Tabs = [
   "Организационно - распорядительная документация",
-  "Документарный блок",
-  "Комисии",
-  "Средства защиты",
-  "Журналы",
-  "Инструкции",
+  "Ответственные лица",
+  "Охрана помещений",
+  "Управление доступом",
+  "Требования по защите информации",
   "Прикладной блок",
-  "Огранизационный блок",
-  "Процесс ознакомления сотрудников с ОРД",
+  "Приложение",
 ];
 
 function handleSubmit(value: Record<string, unknown>) {
@@ -39,7 +33,7 @@ function handleSubmit(value: Record<string, unknown>) {
 <template>
   <div class="bg-white rounded-xl shadow-xl p-8 mx-auto my-16 max-w-[450px]">
     <div class="my-2">
-      <h1 class="text-xl font-bold mb-4">Периодический контроль</h1>
+      <h1 class="text-xl font-bold mb-4">Опросный лист для ИС (К2-К3)</h1>
     </div>
     <FormKit type="form" @submit="handleSubmit">
       <ListInForms v-show="!tab" v-model:tab="tab" :Tabs="Tabs" />
@@ -58,26 +52,16 @@ function handleSubmit(value: Record<string, unknown>) {
           <FormKitSchema :schema="documentation" />
         </section>
         <section v-show="tab === Tabs[2]">
-          <CommitteeCard />
+          <FormKitSchema :schema="security" />
         </section>
         <section v-show="tab === Tabs[3]">
-          <FormKitSchema :schema="cryptographic" />
+          <FormKitSchema :schema="access" />
         </section>
         <section v-show="tab === Tabs[4]">
-          <FormKitSchema :schema="journals" />
+          <FormKitSchema :schema="informationsecurity" />
         </section>
         <section v-show="tab === Tabs[5]">
-          <FormKitSchema :schema="instructions" />
-        </section>
-        <section v-show="tab === Tabs[6]">
-          <FormKitSchema :schema="application" />
           <ARMsCard />
-        </section>
-        <section v-show="tab === Tabs[7]">
-          <FormKitSchema :schema="orgblock" />
-        </section>
-        <section v-show="tab === Tabs[8]">
-          <FormKitSchema :schema="regulations" />
         </section>
       </div>
     </FormKit>
