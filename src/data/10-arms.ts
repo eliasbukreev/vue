@@ -55,6 +55,16 @@ export function getArmSchema(value: string): FormKitSchemaNode[] {
               name: `Модель`,
               label: "Модель",
             },
+            {
+              $formkit: "text",
+              name: `Операционная система`,
+              label: "Операционная система",
+            },
+            {
+              $formkit: "textarea",
+              name: `СЗИ`,
+              label: "СЗИ",
+            },
           ],
         },
         {

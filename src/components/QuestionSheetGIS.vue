@@ -8,7 +8,7 @@ import { organisation } from "../data/01-organisation";
 import { documentation } from "../data/021-documentation";
 import { security } from "../data/11-security";
 import { access } from "../data/12-access";
-import { informationsecurity } from "../data/13-informationsecurity";
+import { informationsecurity } from "../data/131-informationsecurity";
 import { gissetup } from "../data/15-gissetup";
 import { appendix } from "../data/14-appendix";
 
