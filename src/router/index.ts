@@ -1,8 +1,8 @@
 import { createRouter, createMemoryHistory } from "vue-router";
 import HomeView from "../components/HomeView.vue";
-import PeriodicControl from "../components/PeriodicControl.vue";
-import QuestionSheetGIS from "../components/QuestionSheetGIS.vue";
-import QuestionSheetIS from "../components/QuestionSheetIS.vue";
+import PeriodicControl from "../components/surveys/PeriodicControl.vue";
+import QuestionSheetGIS from "../components/surveys/QuestionSheetGIS.vue";
+import QuestionSheetIS from "../components/surveys/QuestionSheetIS.vue";
 
 const routes = [
   { path: "/", component: HomeView },

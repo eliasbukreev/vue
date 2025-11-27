@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import ListInForms from "./ListInForms.vue";
-import { getArmSchema } from "../data/10-arms";
+import { getArmSchema } from "../../data/10-arms";
 import { ref, reactive } from "vue";
 import type { FormKitSchemaNode, FormKitNode } from "@formkit/core";
 
@@ -44,13 +43,23 @@ function removeARM(tabName: string) {
     <h2 class="text-md font-bold mb-2">ARMs</h2>
   </div>
 
-  <ListInForms
-    v-show="!tab"
-    v-model:tab="tab"
-    :Tabs="Tabs"
-    :showRemoveBtn="true"
-    @remove-tab="removeARM"
-  />
+  <ul class="tabs" v-show="!tab">
+    <li
+      v-for="(tab, index) in Tabs"
+      class="tab selection:bg-red-100 selection:text-neutral-700 font-bold rounded outline-none flex px-7 py-3 items-center justify-between mb-1.5 text-sm cursor-pointer border border-red-600 text-red-600 dark:border-red-500 bg-white-50 hover:bg-red-100 dark:text-red-500 formkit-input text-transform: uppercase"
+      :data-tab-active="tab === tab[index]"
+      :key="index"
+    >
+      <span>{{ tab }}</span>
+      <button
+        @click.stop="removeARM(tab[index])"
+        class="ml-2 text-red-600 hover:text-red-800 font-bold text-lg flex items-center justify-center"
+        title="Удалить"
+      >
+        ×
+      </button>
+    </li>
+  </ul>
 
   <FormKit
     v-show="!tab"
