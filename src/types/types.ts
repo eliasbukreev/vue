@@ -7,3 +7,20 @@ export interface TabItem {
   schema?: FormKitSchemaNode[];
   props?: Record<string, string[]>;
 }
+
+export interface Survey {
+  title: string;
+  path: string;
+  surveyConfig: SurveyConfig[];
+  props: Record<string, Card>;
+}
+
+interface SurveyConfig {
+  name: string;
+  url: string;
+}
+
+export interface Card {
+  title: string;
+  schema: FormKitSchemaNode[];
+}
