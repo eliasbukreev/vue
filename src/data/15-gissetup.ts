@@ -1,5 +1,12 @@
 export const gissetup = [
   {
+    $el: "h1",
+    children: "Состав ГИС",
+    attrs: {
+      class: "text-xl font-bold mb-4",
+    },
+  },
+  {
     $formkit: "group",
     name: "Состав ГИС",
     label: "Состав ГИС",

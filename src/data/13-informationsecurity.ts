@@ -1,5 +1,12 @@
 export const informationsecurity = [
   {
+    $el: "h1",
+    children: "Требования по защите информации",
+    attrs: {
+      class: "text-xl font-bold mb-4",
+    },
+  },
+  {
     $formkit: "group",
     name: "Маршрутизатор",
     label: "Маршрутизатор",

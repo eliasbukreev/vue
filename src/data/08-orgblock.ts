@@ -1,5 +1,12 @@
 export const orgblock = [
   {
+    $el: "h1",
+    children: "Организационный блок",
+    attrs: {
+      class: "text-xl font-bold mb-4",
+    },
+  },
+  {
     $formkit: "textarea",
     name: `Расположение аттестованных АРМ серверов`,
     label: "Расположение аттестованных АРМ серверов",

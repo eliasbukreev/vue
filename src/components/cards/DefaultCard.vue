@@ -3,12 +3,12 @@ import type { Card } from "../../types/types";
 
 const props = defineProps<{
   card: Card;
+  data?: Record<string, undefined> | undefined;
 }>();
 </script>
 
 <template>
-  <div>
-    <h1>{{ props.card.title }}</h1>
-    <FormKitSchema :schema="props.card.schema" />
+  <div class="flex flex-col justify-center">
+    <FormKitSchema :schema="props.card.schema" :data="data" />
   </div>
 </template>

@@ -1,5 +1,12 @@
 export const instructions = [
   {
+    $el: "h1",
+    children: "Инструкции",
+    attrs: {
+      class: "text-xl font-bold mb-4",
+    },
+  },
+  {
     $formkit: "file",
     name: "Инструкция администратора ИБ",
     label: "Инструкция администратора ИБ",

@@ -1,5 +1,12 @@
 export const security = [
   {
+    $el: "h1",
+    children: "Охрана помещений",
+    attrs: {
+      class: "text-xl font-bold mb-4",
+    },
+  },
+  {
     $formkit: "group",
     name: "Охрана помещения",
     label: "Охрана помещения",

@@ -1,5 +1,12 @@
 export const journals = [
   {
+    $el: "h1",
+    children: "Журналы",
+    attrs: {
+      class: "text-xl font-bold mb-4",
+    },
+  },
+  {
     $formkit: "file",
     name: "Журнал учёта машинных носителей информации",
     label: "Журнал учёта машинных носителей информации",

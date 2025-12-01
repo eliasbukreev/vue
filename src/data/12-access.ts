@@ -1,5 +1,12 @@
 export const access = [
   {
+    $el: "h1",
+    children: "Управление доступом",
+    attrs: {
+      class: "text-xl font-bold mb-4",
+    },
+  },
+  {
     $formkit: "group",
     name: "Управление доступом",
     label: "Управление доступом",

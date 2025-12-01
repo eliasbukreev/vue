@@ -1,5 +1,12 @@
 export const regulations = [
   {
+    $el: "h1",
+    children: "Процесс ознакомления сотрудников с ОРД",
+    attrs: {
+      class: "text-xl font-bold mb-4",
+    },
+  },
+  {
     $formkit: "file",
     name: "Cписок ознакомления с Политикой ИБ",
     label: "Cписок ознакомления с Политикой ИБ",

@@ -7,13 +7,12 @@ const props = defineProps<{
 </script>
 
 <template>
-  <div>
-    <h1>{{ props.survey.title }}</h1>
+  <div class="flex flex-col items-center">
     <button
       v-for="(section, index) in props.survey.surveyConfig"
       :key="index"
       @click="$router.push(`${props.survey.path}${section.url}`)"
-      class="w-full mb-4 bg-red-600 text-white py-2 rounded-lg hover:bg-red-700 transition font-bold"
+      class="w-full max-w-md mb-4 bg-red-600 text-white py-2 rounded-lg hover:bg-red-700 transition font-bold"
     >
       {{ section.name }}
     </button>

@@ -3,6 +3,13 @@ import type { FormKitSchemaNode } from "@formkit/core";
 export function getArmSchema(value: string): FormKitSchemaNode[] {
   return [
     {
+      $el: "h1",
+      children: "Прикладной блок",
+      attrs: {
+        class: "text-xl font-bold mb-4",
+      },
+    },
+    {
       $formkit: "group",
       name: value,
       label: value,
@@ -70,7 +77,7 @@ export function getArmSchema(value: string): FormKitSchemaNode[] {
         {
           $formkit: "list",
           name: "Перифирия",
-          value: [{}],
+          value: [],
           dynamic: true,
           children: [
             {
@@ -86,26 +93,9 @@ export function getArmSchema(value: string): FormKitSchemaNode[] {
                   label: "Перифирия",
                   children: [
                     {
-                      $el: "div",
-                      attrs: { class: "flex items-center justify-between" },
-                      children: [
-                        {
-                          $el: "h2",
-                          children: "Перифирия",
-                          attrs: { class: "text-md font-bold" },
-                        },
-                        {
-                          $formkit: "button",
-                          onClick: "$removeItem($node, $index)",
-                          children: [
-                            {
-                              $el: "span",
-                              children: "X",
-                              attrs: { class: "btn-delete" },
-                            },
-                          ],
-                        },
-                      ],
+                      $el: "h2",
+                      children: "Перифирия",
+                      attrs: { class: "text-md font-bold" },
                     },
                     {
                       $formkit: "select",
@@ -132,6 +122,23 @@ export function getArmSchema(value: string): FormKitSchemaNode[] {
                       name: `Модель`,
                       label: "Модель",
                     },
+                    {
+                      $el: "div",
+                      attrs: { class: "flex items-center" },
+                      children: [
+                        {
+                          $formkit: "button",
+                          onClick: "$removeItem($node, $index)",
+                          children: [
+                            {
+                              $el: "span",
+                              children: "Удалить перифирию",
+                              attrs: { class: "btn-delete" },
+                            },
+                          ],
+                        },
+                      ],
+                    },
                   ],
                 },
               ],
@@ -147,7 +154,7 @@ export function getArmSchema(value: string): FormKitSchemaNode[] {
           $formkit: "list",
           name: "Список допущенных лиц к работе за АРМ",
           label: "Список допущенных лиц к работе за АРМ",
-          value: [{}],
+          value: [],
           dynamic: true,
           children: [
             {
@@ -163,26 +170,9 @@ export function getArmSchema(value: string): FormKitSchemaNode[] {
                   label: "Допущеное лицо",
                   children: [
                     {
-                      $el: "div",
-                      attrs: { class: "flex items-center justify-between" },
-                      children: [
-                        {
-                          $el: "h2",
-                          children: "Допущеное лицо",
-                          attrs: { class: "text-md font-bold" },
-                        },
-                        {
-                          $formkit: "button",
-                          onClick: "$removeItem($node, $index)",
-                          children: [
-                            {
-                              $el: "span",
-                              children: "X",
-                              attrs: { class: "btn-delete" },
-                            },
-                          ],
-                        },
-                      ],
+                      $el: "h2",
+                      children: "Допущеное лицо",
+                      attrs: { class: "text-md font-bold" },
                     },
                     {
                       $formkit: "text",
@@ -193,6 +183,23 @@ export function getArmSchema(value: string): FormKitSchemaNode[] {
                       $formkit: "text",
                       name: `Должность`,
                       label: "Должность",
+                    },
+                    {
+                      $el: "div",
+                      attrs: { class: "flex items-center" },
+                      children: [
+                        {
+                          $formkit: "button",
+                          onClick: "$removeItem($node, $index)",
+                          children: [
+                            {
+                              $el: "span",
+                              children: "Удалить лицо",
+                              attrs: { class: "btn-delete" },
+                            },
+                          ],
+                        },
+                      ],
                     },
                   ],
                 },
