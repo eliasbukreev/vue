@@ -11,6 +11,7 @@ const props = defineProps<{
     <button
       v-for="(section, index) in props.survey.surveyConfig"
       :key="index"
+      type="button"
       @click="$router.push(`${props.survey.path}${section.url}`)"
       class="w-full max-w-md mb-4 bg-red-600 text-white py-2 rounded-lg hover:bg-red-700 transition font-bold"
     >

@@ -1,14 +1,29 @@
 <script setup lang="ts">
-import { useRoute } from "vue-router";
-import { computed } from "vue";
+import { useRoute, useRouter } from "vue-router";
+import { computed, ref } from "vue";
 
 const route = useRoute();
-
+const router = useRouter();
+const defaultCardRef = ref();
 const pageTitle = computed(() => route.meta.title || "");
 const showBackButton = computed(() => route.meta.showBackButton ?? false);
 const showSubmitButton = computed(() => route.meta.showSubmitButton ?? false);
-</script>
 
+const buttonText = computed(() => {
+  if (showBackButton.value) return "<<< Назад";
+  if (showSubmitButton.value) return "Отправить";
+  return "";
+});
+
+const buttonAction = () => {
+  if (showBackButton.value) {
+    router.back();
+  } else if (showSubmitButton.value) {
+    defaultCardRef.value?.submitForm();
+  }
+};
+</script>
+у
 <template>
   <div
     class="min-h-screen flex flex-col items-center justify-center bg-gray-100"
@@ -24,42 +39,21 @@ const showSubmitButton = computed(() => route.meta.showSubmitButton ?? false);
     >
       <router-view v-slot="{ Component }">
         <transition name="fade" mode="out-in">
-          <component :is="Component" />
+          <component :is="Component" ref="defaultCardRef" />
         </transition>
       </router-view>
+    </div>
 
-      <div class="w-full flex gap-4 items-end justify-center">
-        <transition name="fade" mode="out-in">
-          <button
-            v-if="showBackButton"
-            @click="$router.back()"
-            class="flex items-center max-w-md justify-center w-12 h-12 rounded-full border-2 border-red-600 text-red-600 bg-white hover:bg-red-100 transition-colors duration-200"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M15 19l-7-7 7-7"
-              />
-            </svg>
-          </button>
-        </transition>
-        <transition name="fade" mode="out-in">
-          <button
-            v-if="showSubmitButton"
-            class="w-1/3 mt-6 flex items-center min-h-12 justify-center border-2 border-red-600 text-red-600 bg-white hover:bg-red-100 transition-colors duration-200"
-          >
-            Отправить
-          </button>
-        </transition>
-      </div>
+    <div class="w-1/2 flex mb-12 mt-6 gap-4 items-end justify-center">
+      <transition name="fade" mode="out-in">
+        <button
+          v-if="showBackButton || showSubmitButton"
+          @click="buttonAction"
+          class="w-1/3 mt-6 flex items-center min-h-12 justify-center border-2 border-red-600 text-red-600 bg-white hover:bg-red-100 transition-colors duration-200"
+        >
+          {{ buttonText }}
+        </button>
+      </transition>
     </div>
   </div>
 </template>

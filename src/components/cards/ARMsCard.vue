@@ -1,13 +1,14 @@
 <script setup lang="ts">
-import { getArmSchema } from "../../data/10-arms";
-import { reactive, ref } from "vue";
+import { computed, reactive } from "vue";
 import DefaultCard from "./DefaultCard.vue";
-import type { Card } from "../../types/types";
 import type { FormKitNode } from "@formkit/core";
 import { router } from "../../router";
 import { useRoute } from "vue-router";
+import { useArmsStore } from "./ARMsCard";
 
 const route = useRoute();
+const armsStore = useArmsStore();
+const Arms = computed(() => armsStore.getArms());
 
 const data = reactive({
   addItem: (node: FormKitNode) => () => {
@@ -21,39 +22,28 @@ const data = reactive({
   stringify: JSON.stringify,
 });
 
-const armsIndexes = ref<number[]>([]);
-
-let Nextid = 1;
-
 function addArmPage() {
-  const id = Nextid++;
-  armsIndexes.value.push(id);
-
-  const armCard: Card = {
-    title: `ARM-${id}`,
-    schema: getArmSchema(`ARM-${id}`),
-  };
+  const card = armsStore.addArmPage();
 
   const parent = route.path || "";
 
-  if (!router.hasRoute(`arms-sub-${id}`)) {
+  if (!router.hasRoute(`${card.title}`)) {
     router.addRoute({
-      path: `${parent}/${id}`,
-      name: `arms-sub-${id}`,
+      path: `${parent}/${card.title}`,
+      name: `${card.title}`,
       component: DefaultCard,
-      props: { card: armCard, data: data },
+      props: { card: card, data: data },
       meta: { showBackButton: true, showSubmitButton: true },
     });
   }
 }
 
 function removeArmPage(id: number) {
-  const index = armsIndexes.value.indexOf(id);
-  if (index !== -1) armsIndexes.value.splice(index, 1);
+  armsStore.removeArm(id);
 }
 
-function openArmPage(id: number) {
-  router.push({ name: `arms-sub-${id}` });
+function openArmPage(name: string) {
+  router.push({ name: name });
 }
 </script>
 
@@ -61,14 +51,14 @@ function openArmPage(id: number) {
   <div>
     <ul class="arms-list">
       <li
-        v-for="id in armsIndexes"
-        :key="id"
-        @click="openArmPage(id)"
+        v-for="(arm, index) in Arms"
+        :key="index"
+        @click="openArmPage(arm.title)"
         class="tab selection:bg-red-100 selection:text-neutral-700 font-bold rounded outline-none flex px-7 py-3 items-center justify-between mb-1.5 text-sm cursor-pointer border border-red-600 text-red-600 dark:border-red-500 bg-white-50 hover:bg-red-100 dark:text-red-500 formkit-input text-transform: uppercase"
       >
-        <span>ARM {{ id }}</span>
+        <span>{{ arm.title }}</span>
         <button
-          @click.stop="removeArmPage(id)"
+          @click.stop="removeArmPage(index)"
           class="ml-2 text-red-600 hover:text-red-800 font-bold text-lg flex items-center justify-center"
           title="Удалить"
         >
