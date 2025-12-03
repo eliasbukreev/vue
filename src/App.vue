@@ -10,7 +10,7 @@ const showBackButton = computed(() => route.meta.showBackButton ?? false);
 const showSubmitButton = computed(() => route.meta.showSubmitButton ?? false);
 
 const buttonText = computed(() => {
-  if (showBackButton.value) return "<<< Назад";
+  if (showBackButton.value) return "< Назад";
   if (showSubmitButton.value) return "Отправить";
   return "";
 });
@@ -49,7 +49,7 @@ const buttonAction = () => {
         <button
           v-if="showBackButton || showSubmitButton"
           @click="buttonAction"
-          class="w-1/3 mt-6 flex items-center min-h-12 justify-center border-2 border-red-600 text-red-600 bg-white hover:bg-red-100 transition-colors duration-200"
+          class="w-full md:w-1/2 lg:w-1/3 mt-6 flex items-center min-h-12 justify-center border-2 border-red-600 text-red-600 bg-white hover:bg-red-100 transition-colors duration-200"
         >
           {{ buttonText }}
         </button>

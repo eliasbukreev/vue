@@ -33,7 +33,7 @@ function addArmPage() {
       name: `${card.title}`,
       component: DefaultCard,
       props: { card: card, data: data },
-      meta: { showBackButton: true, showSubmitButton: true },
+      meta: { showBackButton: false, showSubmitButton: true },
     });
   }
 }
@@ -75,3 +75,21 @@ function openArmPage(name: string) {
     />
   </div>
 </template>
+
+<style>
+button:has(.btn-delete) {
+  all: unset;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  color: #ff0000;
+  background-color: #fff;
+  border-radius: 0.25rem;
+  font-weight: bold;
+  font-size: 0.875rem;
+  transition: background-color 0.2s ease;
+}
+</style>
